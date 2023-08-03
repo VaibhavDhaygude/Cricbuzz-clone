@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cricbuzz</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        
+        li a{
+            color: white;
+            font-size: larger;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        li:hover{
+            transform: translate(0px,-5px);
+            box-shadow: 4px 4px 8px 0 rgba(0, 0, 0, 0.2);
+        }
+
+        .navlist{
+            display: flex;
+            justify-content: space-between;
+            width: 60%;
+        }
+        .register{
+            width: 5%;
+        }
+        #signup{
+            justify-content:space-between ;
+        }
+        #logo{
+            width: 90%;
+            padding-left: 1.2em;
+        }
+        .header{
+            /* background: rgb(255,255,255); */
+            background: linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(0,146,112,1) 50%, rgba(255,255,255,1) 100%);
+            display: flex;
+            justify-content:space-around;
+            align-items: center;
+        }
+        
+        div{
+            vertical-align: top;
+            padding: 0px;
+            margin: 0px;
+        }
+        .row{
+            width: 100%;
+            display: inline-flex;
+            margin-top: 1.2em;
+            overflow: auto;
+            white-space: nowrap;
+            padding-bottom: 1.1em;
+            
+        }
+        ::-webkit-scrollbar{
+            display: none;
+        }
+        .column{
+            width: max-content;
+            padding-left: 10px;
+            margin-left: 1.5em;
+
+        }
+        .card{
+            width: 80%;
+            /* background-image: url(cric_img02.jpg);
+            background-size: contain; */
+            background-color: #f1f1f1;
+            padding: 30px;
+            text-align: center;
+            color: black;
+            border-radius: 15px;
+        }
+        .card:hover{
+            box-shadow: 4px 4px 8px 0 rgba(0, 0, 0, 0.2);/* 0 4px 8px 0 horizontal and vertical shadow ,blur effect ,spread radius of shadow*/
+        }
+        .news{
+            display: inline-flex;
+            width: 100%;
+        }
+        .newshead{
+            text-align: center;
+            font-size:40px ;
+        }
+        .newstitle{
+            width: 25%;
+        }
+        .row1{
+            height: 120px;
+            padding: 0;
+            margin-bottom:.8em;
+            background-color:#f1f1f1 ;
+            /* border:2px solid red; */
+            border-radius: 1.1em;
+        }
+        .newscard{
+            margin: 0;
+            height: 100%;
+            /* background-color:#f1f1f1 ; */
+            padding: 1.5em;
+            /* border:2px solid black; */
+        }
+        .desc_news{
+            padding-left: 10px;
+            padding-top: 10px;
+            width: 50%;
+            height: 1000px;
+            overflow-x: hidden;
+            overflow-y: auto;
+        }
+        .row3{
+            
+        }
+        .nc{
+            background-color:#f1f1f1 ;
+            width: 100%;
+            border-radius: 10px;
+        }
+        .newsimg{
+            text-align: center;
+            
+        }
+        .newstxt{
+            text-align: center;
+        }
+
+        .arrow{
+            text-align: right;
+        }
+       .nav{
+        display: flex;
+        align-items: center;
+        /* background-color: #234940; */
+        width: 15%;
+        border-radius: 1.2em;
+       }
+       .subheading{
+        font-size: 30px;
+       }
+       h3{
+        margin: 0;
+        padding: 0;
+       }
+
+       p{
+        margin: 0;
+        padding-top: 1em;
+       }
+    </style>
+</head>
+<body>
+    
+    <div class="header">
+        <div class="nav">
+            <img src="Cricbuzz_Logo.png" alt="Logo" id="logo">
+            
+        </div>
+        <div class="navlist">
+            
+            <li><a href="#index.htm">Live scores</a></li>
+            <li><a href="#index.htm">Schedule</a></li>
+            <li><a href="#index.htm">Archives</a></li>
+            <li><a href="#index.htm">News</a></li>
+            <li><a href="#index.htm">Series</a></li>
+            <li><a href="#index.htm">Teams</a></li>
+            <li><a href="#index.htm">Videos</a></li>
+            <li><a href="#index.htm">Rankings</a></li>
+            <li><a href="#index.htm">More</a></li>
+            
+        </div>
+        <div class="register">
+            <a href="signup.htm"><img src="signup.png"  width="50px"></a>
+        </div>
+    </div>
+    <!-- <div class="matches">
+        <ul>
+            <li><a href="#index.htm">MATCHES</a></li>
+            <li><a href="#index.htm">Match 01</a></li>
+            <li><a href="#index.htm">Match 02</a></li>
+            <li><a href="#index.htm">Match 03</a></li>
+            <li><a href="#index.htm">Match 04</a></li>
+        </ul>
+    </div> -->
+    <!-- <hr> -->
+    <div class="row"> 
+        <div class="column">
+            <div class="card">
+                <h3>Match 1</h3>
+                <p>Score will be displayed here</p>
+            </div>
+        </div>
+
+        <div class="column">
+            <div class="card">
+                <h3>Match 2</h3>
+                <p>Score will be displayed here</p>
+            </div>
+        </div>
+
+        <div class="column">
+            <div class="card">
+                <h3>Match 3</h3>
+                <p>Score will be displayed here</p>
+            </div>
+        </div>
+
+        <div class="column">
+            <div class="card">
+                <h3>Match 4</h3>
+                <p>Score will be displayed here</p>
+            </div>
+        </div>
+
+        <div class="column">
+            <div class="card">
+                <h3>Match 4</h3>
+                <p>Score will be displayed here</p>
+            </div>
+        </div>
+
+        <div class="column">
+            <div class="card">
+                <h3>Match 4</h3>
+                <p>Score will be displayed here</p>
+            </div>
+        </div>
+
+    </div>
+    <!-- <hr> -->
+    <h2 class="newshead">News Section</h2>
+<div class="news">
+    
+    <div class="newstitle">
+        <h3 class="subheading">Latest News</h3>
+        <div class="row1">
+            <div class="newscard">
+                <h3>News1</h3>
+                <p>Description of news will be displayed here</p>
+            </div>
+        </div>
+
+        <div class="row1">
+            <div class="newscard">
+                <h3>News2</h3>
+                <p>Description of news will be displayed here</p>
+            </div>
+        </div>
+
+        <div class="row1">
+            <div class="newscard">
+                <h3>News3</h3>
+                <p>Description of news will be displayed here</p>
+            </div>
+        </div>
+
+        <div class="row1">
+            <div class="newscard">
+                <h3>News4</h3>
+                <p>Description of news will be displayed here</p>
+            </div>
+        </div>
+
+        <div class="row1">
+            <div class="newscard">
+                <h3>News5</h3>
+                <p>Description of news will be displayed here</p>
+            </div>
+        </div>
+
+        <div class="row1">
+            <div class="newscard">
+                <h3>News6</h3>
+                <p>Description of news will be displayed here</p>
+            </div>
+        </div>
+
+        <div class="row1">
+            <div class="newscard">
+                <h3>News7</h3>
+                <p>Description of news will be displayed here</p>
+            </div>
+        </div>
+
+        <div class="row1">
+            <div class="newscard">
+                <h3>News8</h3>
+                <p>Description of news will be displayed here</p>
+            </div>
+        </div>
+    </div>
+   <div class="desc_news">
+    <div class="row3">
+        <div class="nc">
+            <br>
+            <div class="newsimg">
+                <img src="cricnews.png" alt="news image"  width="60%" >
+            </div>
+            <div class="newstxt">
+                <h3>News Title Will Go Here</h3>
+                <p>Description of news will be displayed here</p><br>
+            </div>
+        </div>
+    </div>
+    <br>
+    <div class="row3">
+        <div class="nc">
+            <br>
+            <div class="newsimg">
+                <img src="cricnews.png" alt="news image"  width="60%" >
+            </div>
+            <div class="newstxt">
+                <h3>News Title Will Go Here</h3>
+                <p>Description of news will be displayed here</p><br>
+            </div>
+        </div>
+    </div>
+
+    <br>
+    <div class="row3">
+        <div class="nc">
+            <br>
+            <div class="newsimg">
+                <img src="cricnews.png" alt="news image"  width="60%" >
+            </div>
+            <div class="newstxt">
+                <h3>News Title Will Go Here</h3>
+                <p>Description of news will be displayed here</p><br>
+            </div>
+        </div>
+    </div>
+
+    <br>
+    <div class="row3">
+        <div class="nc">
+            <br>
+            <div class="newsimg">
+                <img src="cricnews.png" alt="news image"  width="60%" >
+            </div>
+            <div class="newstxt">
+                <h3>News Title Will Go Here</h3>
+                <p>Description of news will be displayed here</p><br>
+            </div>
+        </div>
+    </div>
+
+    <!-- <div class="arrow">
+        <img src="arrow.jpg" alt="click here" width="10%">
+    </div> -->
+   </div>
+</div>
+    
+</body>
+</html>

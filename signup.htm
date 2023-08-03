@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>signup</title>
+
+    <style>
+        .main{
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            
+        }
+        input{
+            background-color: #d4e1e2;
+        }
+        form{
+            border: 2px solid black;
+            padding: 20px;
+            border-radius: 1.2em;
+            background-color: #f1f1f1;
+
+        }
+        .submit{
+            text-align: center;
+        }
+        .submit button{
+            border-radius: 5px;
+        }
+    </style>
+
+    <script>
+
+        var letters=/^[A-Za-z]+$/;
+        function validate_name(){
+            var name=document.myform.name.value;
+            
+            if(name==null || name==""){
+                alert("Name can't be blank");
+            }
+            if(!name.match(letters)){
+                alert('Name should contain only alphabets');
+            }
+        }
+
+        function validate_email(){
+            var email=document.myform.email.value;
+            atpos = email.indexOf("@");
+            dotpos = email.lastIndexOf(".");
+            if (atpos < 1 || ( dotpos - atpos < 2 )) {
+                alert("Enter valid Email")
+            }
+        }
+
+        function validate_mobno(){
+            var number=myform.number.value;
+            if(number.length<10){
+                alert('Mobile Number Should be Of Minimum 10 NUmbers');
+            }
+        }
+
+        function validate_pass(){
+            var pass=document.myform.pass.value;
+            var confirm_pass=myform.repeatpass.value;
+            if(pass != confirm_pass){
+                alert("Password Is Not Matching");
+            }
+            if(pass.length<7){
+                alert('Password Should Consist Of Atleast 7 char.');
+            }
+        }
+
+        function validate_form(){
+            
+            
+            
+            
+            
+            
+           
+        }
+
+    </script>
+
+</head>
+<body>
+
+    <div class="main">
+        <h2>SignUp Form</h2><br>
+        <form name="myform" onsubmit="validate_form()">
+            <label for="name"><b>Name</b></label><br>
+            <input type="text" placeholder="Enter Name" name="name" onblur="validate_name()"></input><br>
+            <label for="email"><b>Email</b></label><br>
+            <input type="text" placeholder="Enter Email" name="email" onblur="validate_email()" required><br>
+            <label for="mob_number"><b>Mobile Number</b></label><br>
+            <input type="tel" placeholder="Enter Mobile Number" name="number" onblur="validate_mobno()"><br>
+            <label for="pass"><b>Password</b></label><br>
+            <input type="password" placeholder="Enter Password" name="pass" required><br>
+            <label for="repeatpass"><b>Confirm Password</b></label><br>
+            <input type="password" placeholder="Confirm Password" name="repeatpass" onblur="validate_pass()"  required><br><br>
+            <div class="submit"><button type="submit" ><b>Submit</b></button></div>
+        </form>
+    </div>
+
+</body>
+</html>
